@@ -3,6 +3,14 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+
+	$(".friendName").click(function(e) {
+		e.preventDefault();
+		var anagram = anagrammedName($(this).text());
+		$(this).text(anagram);
+		console.log("clicked");
+	});
 })
 
 /*
